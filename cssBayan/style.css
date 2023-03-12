@@ -33,37 +33,22 @@ ul{
     src: url(/cssBayan/fonts/SourceSansPro-Bold.ttf);    
     font-weight: 700;    
 }
-/* main{
-    background-color: #F6F6F6;
-} */
+input{
+    appearance: none;
+}
 .wrap{
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 60%;
+    max-width: 80%;
     padding: 5em;    
 }
-.mem {
-    display: flex;
-    justify-content: space-between;
-}
-.cross,.plus{
-    max-width: 2em;
-    max-height: 2em;
-    display: none;
-}
-
-.plus{
-    display: none;
-}
 /* .mem_img{
-    display: none;
     display: flex;
-    flex-direction: column;    
-    align-items: center; 
-    max-width: 0%;
-    transition: all 2s ease;
+    max-width: 60%;
 } */
+
+
 .header{
     padding-top: 1.5em;
     padding-bottom: 1.5em;
@@ -88,31 +73,94 @@ h3{
 .content_wrap:hover{
     cursor: pointer;    
 }
-.content_wrap:hover .plus{
+.content_wrap:hover span{
     display: flex;
     cursor: pointer;   
 }
+
 .content_wrap:hover h3{
     color: #292929;
+    cursor: pointer;
 }
 span{
-/* width: 0;
-height: 0; */
+display: none;
 border-style: solid;
 border-width: 1em 1em 0 1em;
 border-color: #232424 transparent transparent transparent;
 transition: all 2s ease;
-/* transform: rotate(180deg); */
 }
 
-#first_mem:checked ~.first_mem_img>.mem_img{    
+#first_mem:checked~label >.first_mem_img>.mem_img{ 
+    display: flex;    
+    flex-direction: column;    
+    align-items: center;    
     max-width: 60%; 
     transition: all 2s ease;
+    cursor: pointer;
 }
-.first_mem_wrap,.second_mem_wrap,.third_mem_wrap,.fourth_mem_wrap,.fifth_mem_wrap{
+.content_wrap:hover > #first_mem:checked ~ label > span{
+    border-style: solid;
+    border-width: 0 1em 1em 1em;
+    border-color: transparent transparent #232424  transparent; 
+    cursor: pointer;   
+}
+
+#second_mem:checked~label >.second_mem_img>.mem_img{    
+    max-width: 60%; 
+    transition: all 2s ease;
+    cursor: pointer;
+}
+.content_wrap:hover > #second_mem:checked ~ label > span{
+    border-style: solid;
+    border-width: 0 1em 1em 1em;
+    border-color: transparent transparent #232424 transparent;
+    transition: all 2s ease;    
+    cursor: pointer;
+}
+#third_mem:checked~label >.third_mem_img>.mem_img{    
+    max-width: 60%; 
+    transition: all 2s ease;
+    cursor: pointer;
+}
+.content_wrap:hover > #third_mem:checked ~ label > span{
+    border-style: solid;
+    border-width: 0 1em 1em 1em;
+    border-color: transparent transparent #232424 transparent;
+    transition: all 2s ease; 
+    cursor: pointer;   
+}
+#fourth_mem:checked~label >.fourth_mem_img>.mem_img{    
+    max-width: 60%; 
+    transition: all 2s ease;
+    cursor: pointer;
+}
+.content_wrap:hover > #fourth_mem:checked ~ label > span{
+    border-style: solid;
+    border-width: 0 1em 1em 1em;
+    border-color: transparent transparent #232424 transparent;
+    transition: all 2s ease; 
+    cursor: pointer;
+}
+#fifth_mem:checked~label >.fifth_mem_img>.mem_img{    
+    max-width: 60%; 
+    transition: all 2s ease;
+    cursor: pointer;
+}
+.content_wrap:hover > #fifth_mem:checked ~ label > span{
+    border-style: solid;
+    border-width: 0 1em 1em 1em;
+    border-color: transparent transparent #232424 transparent;
+    transition: all 2s ease;  
+    cursor: pointer;  
+}
+.mem{
     display: flex;
     flex-direction: column;     
-    row-gap: 2em;
+    row-gap: 2em; 
+}
+.mem_title{
+    display: flex;
+    justify-content: space-between;
 }
 .first_mem_wrap:hover .first_mem_img>.mem_img{
     max-width: 60%; 
@@ -131,6 +179,9 @@ transform: rotate(180deg);
 transition: all 2s ease;
 }
 .third_mem_wrap:hover .third_mem_img>.mem_img{
+    display: flex;    
+    flex-direction: column;    
+    align-items: center;  
     max-width: 60%; 
     transition: all 2s ease;
 }
@@ -157,13 +208,20 @@ transition: all 2s ease;
 .first_mem_wrap >.first_mem_img,.second_mem_wrap >.second_mem_img,.third_mem_wrap>.third_mem_img,.fourth_mem_wrap>.fourth_mem_img,.fifth_mem_wrap>.fifth_mem_img{
     display: flex;    
     flex-direction: column;    
-    align-items: center;   
+    align-items: center;  
+    cursor: pointer;
 }
-.first_mem_wrap >.first_mem_img>.mem_img,.second_mem_wrap >.second_mem_img>.mem_img,.third_mem_wrap>.third_mem_img>.mem_img,.fourth_mem_wrap>.fourth_mem_img>.mem_img,.fifth_mem_wrap>.fifth_mem_img>.mem_img{
+.first_mem_img>.mem_img,.mem>.second_mem_img>.mem_img,.third_mem_img>.mem_img,.fourth_mem_img>.mem_img,.fifth_mem_img>.mem_img{
     display: flex;
     max-width: 0%;
     flex-direction: column;    
     align-items: center;
     transition: all 2s ease;
+    cursor: pointer;
 }
-/* third */
+.first_mem_img,.second_mem_img,.fourth_mem_img,.fifth_mem_img,.third_mem_img{
+    display: flex;
+    flex-direction: column;    
+    align-items: center; 
+    cursor: pointer;
+}
